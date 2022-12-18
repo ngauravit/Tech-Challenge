@@ -10,13 +10,18 @@ This web application has below 3 tiers:
 First we will have to create a Linux VM where we will be installing docker and kubectl.
 
 We will use Terraform to create an Azure Kubuernetes Service cluster (K8sDemoCluster). To do that we will perform below steps:
+
+
 **Cluster Creation**
+```console
 cd AKS
 terraform init
 terraform plan 
 terraform apply
+```
 
 After the Cluster is created on Azure we will connect with the cluster using below command.
+
 **Connect to Cluster**
 az aks get-credentials --resource-group K8sDemoRG --name K8sDemoCluster
 
